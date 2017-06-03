@@ -15,11 +15,19 @@ else
 function todolist()
 {
 var item = document.getElementById("todoinput").value;
+var item1 = document.getElementById('priority').value;
+    
 if(item.length==0)
 { 
 	//alert("you need to write something") ;
   document.getElementById('err1').innerHTML="* mandatory!!!";
   document.getElementById('err1').style.color="red";
+}
+    else if(item1!="1"||item1!="2"||item1!="3")
+{ 
+	
+  document.getElementById('err2').innerHTML="* mandatory!!!";
+  document.getElementById('err2').style.color="red";
 }
 else
 {
@@ -84,9 +92,5 @@ var close = document.getElementsByClassName("close");
 
 
 
- function backcolor() {
-  
-
- }
 
 
