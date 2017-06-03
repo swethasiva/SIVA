@@ -1,0 +1,136 @@
+div#bart h1 
+{
+	color: white;
+	display: inline-block;
+	
+}
+div#bart
+{
+	background-image: url("titlebar1.jpg");
+	display:inline-block;
+background-size: 100% 100%;
+padding-top: 30px;
+padding-bottom: 50px;
+padding-right:300px;
+padding-left: 500px;
+margin:0px;
+
+
+}
+
+input[type=text]
+{
+	float: right;
+	width: 130px;
+    -webkit-transition: width 0.4s ease-out;
+    transition: width 0.4s ease-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+
+div#new-task
+{
+
+	background-color: gray;
+
+}
+
+div#heading
+{
+	display: inline-block;
+}
+
+
+body
+{
+	margin:0px 0px 0px 0px;
+}
+
+
+
+
+select option[value="1"] {
+  background-color: #f00;  
+}
+
+select option[value="2"] {
+  background-color: #0f0;   
+}
+
+select option[value="3"] {
+  background-color: #00f;  
+}
+
+/*
+select
+{
+	margin-left:200px;
+	margin-top: 30px;
+}*/
+div#add-task
+{
+	display: inline-block;
+}
+
+#todoinput
+{
+	width:400px;
+	height: 45px;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 3px;
+	border-color:  #C70039;
+}
+
+
+select
+{
+	width:200px;
+	height: 45px;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 3px;
+	border-color:  #C70039;
+	margin-left: 90px;
+}
+
+
+#btn
+{
+	margin-left: 100px;
+	border-style: inset;
+	border-width: 5px;
+	border-color:  silver;
+	background-color:  #d2dfdd;
+	color:#581845;
+	font-size: 15px;
+
+}
+ol
+{
+	list-style-type: none;
+	
+
+}
+
+li
+{
+	padding :10px;
+	border: 5px solid black;
+	margin-right: 50px;
+
+
+}
+
+button
+{
+	float: right;
+}
+
+#container
+{
+    background-image: url('backimg.jpg');
+}
