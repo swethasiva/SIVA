@@ -22,15 +22,12 @@ if(item.length==0)
 	//alert("you need to write something") ;
   document.getElementById('err1').innerHTML="* mandatory!!!";
   document.getElementById('err1').style.color="red";
+   
 }
-    else if(item1!="1"||item1!="2"||item1!="3")
-{ 
-	
-  document.getElementById('err2').innerHTML="* mandatory!!!";
-  document.getElementById('err2').style.color="red";
-}
-else
-{
+    
+
+    
+ else {
 	var text =document.createTextNode(item);
 var newitem=document.createElement("li");
 
@@ -45,6 +42,7 @@ var newitem=document.createElement("li");
    newitem.appendChild(text);
 //newitem.style.visibility="show";
 document.getElementById("todolist").appendChild(newitem);
+      addbtn();
    }
 
 
@@ -54,6 +52,7 @@ document.getElementById("todolist").appendChild(newitem);
       newitem.appendChild(text);
 
 document.getElementById("todolist").appendChild(newitem);
+       addbtn();
    }
 
    
@@ -63,11 +62,28 @@ else if(sel1 == "3"){
      newitem.appendChild(text);
 
 document.getElementById("todolist").appendChild(newitem);
+    addbtn();
    }
+else 
+    {
+         document.getElementById('err2').innerHTML="* mandatory!!!";
+  document.getElementById('err2').style.color="red";
+        nvalue=0;
+    }
 
 
 }
-var myNodelist = document.getElementsByTagName("LI");
+    
+
+
+   
+
+
+}
+
+function addbtn ()
+{
+    var myNodelist = document.getElementsByTagName("LI");
 var i=myNodelist.length-1;
 var span =document.createElement("BUTTON");
 var txt =document.createTextNode("TASK COMPLETED");
@@ -77,15 +93,12 @@ myNodelist[i].appendChild(span);
 var close = document.getElementsByClassName("close");
 
 
+
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
   }
-
-
-   
-
-
+    
 }
 
 
