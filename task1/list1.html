@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> WORK LIST </title>
+		<link rel="stylesheet" type=text/css href="mystyle.css"/>
+
+
+
+
+	</head>
+	<body>
+	
+	<header>
+	<div id="bart">
+	
+	    <h1>WELCOME JOE HACKER</h1>
+		<input type="text" name="search" placeholder="Search Notes.." >
+     </div>
+     
+	</header>
+	<div id="new-task" >
+	<input type="image" src="navbar.jpg" alt="navigation bar" width ="40px" height =" 40px"  onclick="openMenu()"></header>
+     
+	
+	 <div id="heading"><h2> &nbsp &nbsp &nbsp &nbsp  &nbsp Hey, Got Something New .... </h2></div>
+
+
+
+
+
+ <form id="todoform">
+ <center>
+	<table>
+	<tr><td><textarea id="todoinput"></textarea> </td>
+	<td><div id="err1"></div></td>
+	</tr>
+	<tr><td>
+	<select id="priority" >   
+	    <option>SELECT PRIORITY</option> 
+    	<option value="1">HIGH</option>
+    	<option value="2">MEDIUM</option>
+    	<option value="3">LOW</option>
+	</select></td>
+	<td><div id="err2"></div></td>
+	</tr>
+	<tr>
+<td>
+	<input type="button" onclick="todolist()" value ="ADD NEW TASK" id="btn"></button>
+	</td></tr>
+	</table></center>
+</form>
+
+
+
+
+
+	
+
+
+&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  
+
+<h6>            &nbsp &nbsp &nbsp                   <h6>
+</div>
+
+<div id="container">
+<ol id="todolist" contenteditable="true">
+
+</ol>
+    
+
+   
+</div>
+    
+<center>
+    <input type="button" onclick="sort()" value="sort"/>
+</center>
+
+    
+
+
+
+
+
+	<script src="list1.js"></script>
+
+	</body>
+
+</html>
+
