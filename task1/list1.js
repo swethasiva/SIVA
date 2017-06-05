@@ -12,7 +12,7 @@ else
 }
 
 
-
+//localStorage.clear();
 
 function todolist()
 { sval=0;
@@ -169,34 +169,67 @@ function getelement()
         {
             
          var item=localStorage.getItem("element");
+            var item1=localStorage.getItem("prior");
             item=item.split(",");
-            for(var i=0;i<item.length;i++)
-          { 
-              var text =document.createTextNode(item[i]);
+            item1=item1.split(",");
+for(var i=0;i<item.length;i++)
+     { 
+         var text =document.createTextNode(item[i]);
          var newitem=document.createElement("li");
-         newitem.appendChild(text);
-         document.getElementById("todolist").appendChild(newitem);
               
-          }
+              if(item1[i]==1)
+              {
+
+   newitem.style.backgroundColor="#E86565";
+   newitem.appendChild(text);
+
+document.getElementById("todolist").appendChild(newitem);
+
+              }
+
+
+   else if(item1[i]==2)
+        {
+   
+      newitem.style.backgroundColor="#c1f7f1";
+      newitem.appendChild(text);
+
+document.getElementById("todolist").appendChild(newitem);
+   
+        }
+
+   
+else if(item1[i]==3)
+        {
+
+     newitem.style.backgroundColor="#FCF3CF";
+     newitem.appendChild(text);
+
+document.getElementById("todolist").appendChild(newitem);
+
+        }
+              
+  }
             
        
        
-          
-        }
+}
     
         function store()
         {
             var myNodelist = document.getElementsByTagName("LI");
              var arr= new Array();
             
+            
            for (var i=0;i<myNodelist.length;i++)
                {
                    arr.push(myNodelist[i].innerHTML);
-                  
+                
                }
             
              var i=myNodelist.length-1;
             localStorage.setItem("element",arr);
+            localStorage.setItem("prior",priority);
             
            
             
