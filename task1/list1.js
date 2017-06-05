@@ -33,7 +33,7 @@ if(item.length==0)
 	var text =document.createTextNode(item);
 var newitem=document.createElement("li");
 var myNodelist = document.getElementsByTagName("LI");
-var i=myNodelist.length-1;
+var i=myNodelist.length;
 
  var sel1 = document.getElementById('priority').value;
 
@@ -101,10 +101,12 @@ span.className="close";
 span.appendChild(txt);
 myNodelist[i].appendChild(span);
 var close = document.getElementsByClassName("close");
+    
 
 
 
-  close[i].onclick = function() {
+  close[i].onclick = function()
+  {
     var div = this.parentElement;
     div.style.display = "none";
   }
@@ -118,7 +120,7 @@ var close = document.getElementsByClassName("close");
 
 
 function sort()
-{  
+{  alert("called");
     if(sval==1)
         {
             alert("it is alredy sorted");
@@ -128,31 +130,33 @@ function sort()
     else {
      var myNodelist = document.getElementsByTagName("LI");
    
-    for(var i=0;i<myNodelist.length-1;i++)
+    for(var i=0;i<=myNodelist.length-1;i++)
         { 
             if(priority[i]==1)
                 {
-                   document.getElementById("todolist").appendChild(myNodelist[i]);
+                   document.getElementById("sorted").appendChild(myNodelist[i]);
                 }
             
         }
-     for(var i=0;i<myNodelist.length-1;i++)
+     for(var i=0;i<=myNodelist.length-1;i++)
         { 
             if(priority[i]==2)
                 {
-                   document.getElementById("todolist").appendChild(myNodelist[i]);
+                   document.getElementById("sorted").appendChild(myNodelist[i]);
+                    
                 }
             
         }
- for(var i=0;i<myNodelist.length-1;i++)
+ for(var i=0;i<=myNodelist.length-1;i++)
         { 
             if(priority[i]==3)
                 {
-                   document.getElementById("todolist").appendChild(myNodelist[i]);
+                   document.getElementById("sorted").appendChild(myNodelist[i]);
                 }
             
         }
             sval=1;
+        document.getElementById('todolist').style.display ='none';
     }
     
     
@@ -161,4 +165,44 @@ function sort()
 
 
 
-
+function getelement()
+        {
+            
+         var item=localStorage.getItem("element");
+            item=item.split(",");
+            for(var i=0;i<item.length;i++)
+          { 
+              var text =document.createTextNode(item[i]);
+         var newitem=document.createElement("li");
+         newitem.appendChild(text);
+         document.getElementById("todolist").appendChild(newitem);
+              
+          }
+            
+       
+       
+          
+        }
+    
+        function store()
+        {
+            var myNodelist = document.getElementsByTagName("LI");
+             var arr= new Array();
+            
+           for (var i=0;i<myNodelist.length;i++)
+               {
+                   arr.push(myNodelist[i].innerHTML);
+                  alert(myNodelist[i].innerHTML);
+               }
+            
+             var i=myNodelist.length-1;
+            localStorage.setItem("element",arr);
+            
+           
+            
+        }
+        
+        function save()
+        {
+                store();
+        }
