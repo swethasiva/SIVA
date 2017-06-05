@@ -192,7 +192,7 @@ function getelement()
            for (var i=0;i<myNodelist.length;i++)
                {
                    arr.push(myNodelist[i].innerHTML);
-                  alert(myNodelist[i].innerHTML);
+                  
                }
             
              var i=myNodelist.length-1;
