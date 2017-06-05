@@ -117,7 +117,7 @@ var close = document.getElementsByClassName("close");
 
 
 
-
+/*
 
 function sort()
 {  alert("called");
@@ -162,7 +162,7 @@ function sort()
     
 }
 
-
+*/
 
 
 function getelement()
@@ -184,6 +184,7 @@ for(var i=0;i<item.length;i++)
    newitem.appendChild(text);
 
 document.getElementById("todolist").appendChild(newitem);
+                   addbtn();
 
               }
 
@@ -195,6 +196,7 @@ document.getElementById("todolist").appendChild(newitem);
       newitem.appendChild(text);
 
 document.getElementById("todolist").appendChild(newitem);
+             addbtn();
    
         }
 
@@ -206,6 +208,7 @@ else if(item1[i]==3)
      newitem.appendChild(text);
 
 document.getElementById("todolist").appendChild(newitem);
+             addbtn();
 
         }
               
