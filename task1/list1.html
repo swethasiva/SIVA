@@ -8,7 +8,7 @@
 
 
 	</head>
-	<body>
+	<body onload="getelement()">
 	
 	<header>
 	<div id="bart">
@@ -46,6 +46,7 @@
 	<tr>
 <td>
 	<input type="button" onclick="todolist()" value ="ADD NEW TASK" id="btn"></button>
+   
 	</td></tr>
 	</table></center>
 </form>
@@ -66,13 +67,15 @@
 <ol id="todolist" contenteditable="true">
 
 </ol>
-    
+
+<ol id="sorted" ></ol>
 
    
 </div>
     
 <center>
     <input type="button" onclick="sort()" value="sort"/>
+     <input type="button" onclick="save()" value ="STORE" id="btn">
 </center>
 
     
