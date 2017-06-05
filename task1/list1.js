@@ -1,7 +1,7 @@
 var sval=0;
 var flag =1 ;
 var priority=new Array(100);
-	function openMenu(e){
+	function openMenu(e){                             //function to display and hide the name bar
 		if(flag==0)
 	{document.getElementById('bart').style.display = 'block';
      flag=1;}
@@ -14,7 +14,7 @@ else
 
 //localStorage.clear();
 
-function todolist()
+function todolist()                                 //function to add notes with priority into list
 { sval=0;
 var item = document.getElementById("todoinput").value;
 var item1 = document.getElementById('priority').value;
@@ -91,7 +91,7 @@ else
 
 }
 
-function addbtn ()
+function addbtn ()                                // adding close button to each note
 {
     var myNodelist = document.getElementsByTagName("LI");
 var i=myNodelist.length-1;
@@ -165,7 +165,7 @@ function sort()
 */
 
 
-function getelement()
+function getelement()                                                //reconstructing data from local storage
         {
             
          var item=localStorage.getItem("element");
@@ -218,7 +218,7 @@ document.getElementById("todolist").appendChild(newitem);
        
 }
     
-        function store()
+        function store()   // storing data into local storage
         {
             var myNodelist = document.getElementsByTagName("LI");
              var arr= new Array();
